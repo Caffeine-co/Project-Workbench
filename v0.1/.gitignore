@@ -1,0 +1,14 @@
+# Runtime data
+#/data/
+#*.db
+#*.db-wal
+#*.db-shm
+
+# Python cache/build
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/

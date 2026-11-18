@@ -1,0 +1,225 @@
+{
+  "apartment_sustainable": {
+    "scene": "apartment_sustainable",
+    "hours": 720,
+    "event_counts": {
+      "action_completed": 174,
+      "action_started": 462,
+      "actor_moved": 288,
+      "commitment_completed": 1,
+      "goal_changed": 311,
+      "long_goal_completed": 1,
+      "practice_completed": 59,
+      "world_resource_added": 60
+    },
+    "actors": {
+      "resident_01": {
+        "end_vitality": 100,
+        "min_vitality_hourly": 95.0,
+        "max_need_hourly": {
+          "thirst": 59.66,
+          "hunger": 57.41666667,
+          "sleep_pressure": 75.7,
+          "fatigue": 48.10000001,
+          "creative_urge": 19.2
+        },
+        "final_skills": {
+          "drawing": 49.19968427
+        },
+        "memories": 60,
+        "relationships": {},
+        "commitments": [
+          {
+            "minute": 720,
+            "kind": "practice",
+            "target": "practice_drawing",
+            "status": "completed"
+          }
+        ]
+      }
+    },
+    "end_inventory": {
+      "water": 40.0,
+      "food": 30.0
+    },
+    "hourly_rows": 721
+  },
+  "apartment_scarce": {
+    "scene": "apartment_scarce",
+    "hours": 168,
+    "event_counts": {
+      "action_blocked": 1,
+      "action_completed": 9,
+      "action_failed": 7,
+      "action_started": 34,
+      "actor_moved": 18,
+      "goal_changed": 16,
+      "practice_completed": 3,
+      "world_facility_changed": 2
+    },
+    "actors": {
+      "resident_01": {
+        "end_vitality": 0,
+        "min_vitality_hourly": 0,
+        "max_need_hourly": {
+          "thirst": 100,
+          "hunger": 100,
+          "sleep_pressure": 100,
+          "fatigue": 100,
+          "creative_urge": 99.49333333
+        },
+        "final_skills": {
+          "drawing": 2.97506945
+        },
+        "memories": 10,
+        "relationships": {},
+        "commitments": []
+      }
+    },
+    "end_inventory": {
+      "water": 0.0,
+      "food": 0.0
+    },
+    "hourly_rows": 169
+  },
+  "apartment_interrupt": {
+    "scene": "apartment_interrupt",
+    "hours": 72,
+    "event_counts": {
+      "action_blocked": 1,
+      "action_completed": 15,
+      "action_interrupted": 1,
+      "action_started": 42,
+      "actor_moved": 26,
+      "goal_changed": 29,
+      "practice_completed": 4,
+      "world_resource_added": 6,
+      "world_vitality_changed": 2
+    },
+    "actors": {
+      "resident_01": {
+        "end_vitality": 100,
+        "min_vitality_hourly": 2.2166667,
+        "max_need_hourly": {
+          "thirst": 60.23,
+          "hunger": 70.0,
+          "sleep_pressure": 80.2,
+          "fatigue": 41.4,
+          "creative_urge": 38.4
+        },
+        "final_skills": {
+          "drawing": 3.9502772
+        },
+        "memories": 5,
+        "relationships": {},
+        "commitments": []
+      }
+    },
+    "end_inventory": {
+      "water": 40.0,
+      "food": 30.0
+    },
+    "hourly_rows": 73
+  },
+  "apartment_messages": {
+    "scene": "apartment_messages",
+    "hours": 72,
+    "event_counts": {
+      "action_completed": 17,
+      "action_started": 45,
+      "actor_moved": 28,
+      "goal_changed": 32,
+      "message_received": 1,
+      "practice_completed": 6,
+      "world_resource_added": 6
+    },
+    "actors": {
+      "resident_01": {
+        "end_vitality": 100,
+        "min_vitality_hourly": 95.0,
+        "max_need_hourly": {
+          "thirst": 45.34666667,
+          "hunger": 52.5,
+          "sleep_pressure": 74.3,
+          "fatigue": 47.285,
+          "creative_urge": 19.2
+        },
+        "final_skills": {
+          "drawing": 5.87638023
+        },
+        "memories": 7,
+        "relationships": {},
+        "commitments": []
+      }
+    },
+    "end_inventory": {
+      "water": 40.0,
+      "food": 30.0
+    },
+    "hourly_rows": 73
+  },
+  "roommates": {
+    "scene": "roommates",
+    "hours": 720,
+    "event_counts": {
+      "action_completed": 345,
+      "action_started": 928,
+      "actor_moved": 554,
+      "goal_changed": 634,
+      "long_goal_completed": 2,
+      "practice_completed": 118,
+      "social_interaction": 29,
+      "world_resource_added": 60
+    },
+    "actors": {
+      "resident_01": {
+        "end_vitality": 100,
+        "min_vitality_hourly": 95.0,
+        "max_need_hourly": {
+          "thirst": 59.40666667,
+          "hunger": 59.5,
+          "sleep_pressure": 75.69999999,
+          "fatigue": 48.055,
+          "creative_urge": 19.2
+        },
+        "final_skills": {
+          "drawing": 47.97898913
+        },
+        "memories": 89,
+        "relationships": {
+          "resident_02": {
+            "trust": 0.7514,
+            "interactions": 29
+          }
+        },
+        "commitments": []
+      },
+      "resident_02": {
+        "end_vitality": 100,
+        "min_vitality_hourly": 95.0,
+        "max_need_hourly": {
+          "thirst": 55.25333333,
+          "hunger": 61.0,
+          "sleep_pressure": 76.0,
+          "fatigue": 38.4
+        },
+        "final_skills": {
+          "reading": 48.5893367
+        },
+        "memories": 89,
+        "relationships": {
+          "resident_01": {
+            "trust": 0.7514,
+            "interactions": 29
+          }
+        },
+        "commitments": []
+      }
+    },
+    "end_inventory": {
+      "water": 40.0,
+      "food": 30.0
+    },
+    "hourly_rows": 1442
+  }
+}

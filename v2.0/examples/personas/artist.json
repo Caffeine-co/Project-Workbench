@@ -1,0 +1,68 @@
+{
+  "id": "human_artist",
+  "name": "小林",
+  "biography": "大学生，喜欢绘画，做事较谨慎。",
+  "traits": {
+    "extraversion": 0.48,
+    "agreeableness": 0.78,
+    "conscientiousness": 0.75,
+    "openness": 0.9
+  },
+  "interests": {
+    "drawing": 0.95
+  },
+  "ambitions": {
+    "drawing": 40
+  },
+  "drives": {
+    "thirst": {
+      "initial": 30,
+      "rise_per_hour": 3.8,
+      "threshold": 45,
+      "priority": 4
+    },
+    "hunger": {
+      "initial": 20,
+      "rise_per_hour": 2.5,
+      "threshold": 50,
+      "priority": 3
+    },
+    "sleep_pressure": {
+      "initial": 25,
+      "rise_per_hour": 2.3,
+      "threshold": 65,
+      "priority": 3
+    },
+    "fatigue": {
+      "initial": 15,
+      "rise_per_hour": 1.1,
+      "threshold": 70,
+      "priority": 2
+    },
+    "creative_urge": {
+      "initial": 12,
+      "rise_per_hour": 0.8,
+      "threshold": 68,
+      "priority": 0.9
+    }
+  },
+  "body": {
+    "initial_vitality": 95,
+    "idle_recovery_per_hour": 0.3,
+    "move_cost_per_hour": 0.8,
+    "use_cost_per_hour": 0.3,
+    "rest_recovery_per_hour": 1.8,
+    "min_move_vitality": 12,
+    "min_use_vitality": 6,
+    "critical_drives": {
+      "thirst": [
+        91,
+        1.8
+      ],
+      "hunger": [
+        96,
+        0.8
+      ]
+    }
+  }
+}

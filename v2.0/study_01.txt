@@ -1,0 +1,42 @@
+PS C:\...> python -m simlife examples/scenarios/art_project_disrupted.json --hours 6 --db data/study_01.db --tail 30
+World: apartment_disrupted | 0 -> 360 minutes
+Resources: {"water": 17.0, "food": 10.0}
+Actor: resident_01 @ studio | goal=None | busy=None
+  drives: {"thirst": 7.03, "hunger": 35.0, "sleep_pressure": 38.8, "fatigue": 21.6, "creative_urge": 16.8}
+  vitality: 95.6766667 skills: {'drawing': 4.0} memories: 1 relations: 0
+Events: {'action_completed': 1, 'action_failed': 1, 'action_started': 6, 'actor_moved': 4, 'goal_changed': 3, 'project_step_failed': 1, 'world_facility_changed': 1}
+  t=   240 | goal_changed           | resident_01  | {"before": null, "after": "thirst"}
+  t=   240 | action_started         | resident_01  | {"action": "move", "target": "hall", "goal": "thirst", "project": null, "participants": []}
+  t=   242 | actor_moved            | resident_01  | {"location": "hall"}
+  t=   242 | action_started         | resident_01  | {"action": "move", "target": "kitchen", "goal": "thirst", "project": null, "participants": []}
+  t=   245 | actor_moved            | resident_01  | {"location": "kitchen"}
+  t=   245 | action_started         | resident_01  | {"action": "use", "target": "tap", "goal": "thirst", "project": null, "participants": []}
+  t=   249 | action_completed       | resident_01  | {"action": "use", "facility": "tap", "effects": {"thirst": -45.77}}
+  t=   249 | goal_changed           | resident_01  | {"before": "thirst", "after": "project:art_portfolio"}
+  t=   249 | action_started         | resident_01  | {"action": "move", "target": "hall", "goal": "project:art_portfolio", "project": "art_portfolio", "participants": []}
+  t=   252 | actor_moved            | resident_01  | {"location": "hall"}
+  t=   252 | action_started         | resident_01  | {"action": "move", "target": "studio", "goal": "project:art_portfolio", "project": "art_portfolio", "participants": []}
+  t=   254 | actor_moved            | resident_01  | {"location": "studio"}
+  t=   254 | action_started         | resident_01  | {"action": "practice", "target": "practice_drawing", "goal": "project:art_portfolio", "project": "art_portfolio", "participants": []}
+  t=   300 | world_facility_changed | -            | {"facility": "practice_drawing", "enabled": false}
+  t=   344 | action_failed          | resident_01  | {"action": "use", "facility": "practice_drawing", "reason": "facility_disabled"}
+  t=   344 | project_step_failed    | resident_01  | {"project": "art_portfolio", "step": 0, "reason": "action_failed", "attempts": 1}
+  t=   344 | goal_changed           | resident_01  | {"before": "project:art_portfolio", "after": null}
+PS C:\...> python scripts/trace.py data/study_01.db --from-minute 230 --to-minute 350 --limit 100
+t=   240 | goal_changed           | resident_01     | {"before": null, "after": "thirst"}
+t=   240 | action_started         | resident_01     | {"action": "move", "target": "hall", "goal": "thirst", "project": null, "participants": []}
+t=   242 | actor_moved            | resident_01     | {"location": "hall"}
+t=   242 | action_started         | resident_01     | {"action": "move", "target": "kitchen", "goal": "thirst", "project": null, "participants": []}
+t=   245 | actor_moved            | resident_01     | {"location": "kitchen"}
+t=   245 | action_started         | resident_01     | {"action": "use", "target": "tap", "goal": "thirst", "project": null, "participants": []}
+t=   249 | action_completed       | resident_01     | {"action": "use", "facility": "tap", "effects": {"thirst": -45.77}}
+t=   249 | goal_changed           | resident_01     | {"before": "thirst", "after": "project:art_portfolio"}
+t=   249 | action_started         | resident_01     | {"action": "move", "target": "hall", "goal": "project:art_portfolio", "project": "art_portfolio", "participants": []}
+t=   252 | actor_moved            | resident_01     | {"location": "hall"}
+t=   252 | action_started         | resident_01     | {"action": "move", "target": "studio", "goal": "project:art_portfolio", "project": "art_portfolio", "participants": []}
+t=   254 | actor_moved            | resident_01     | {"location": "studio"}
+t=   254 | action_started         | resident_01     | {"action": "practice", "target": "practice_drawing", "goal": "project:art_portfolio", "project": "art_portfolio", "participants": []}
+t=   300 | world_facility_changed | -               | {"facility": "practice_drawing", "enabled": false}
+t=   344 | action_failed          | resident_01     | {"action": "use", "facility": "practice_drawing", "reason": "facility_disabled"}
+t=   344 | project_step_failed    | resident_01     | {"project": "art_portfolio", "step": 0, "reason": "action_failed", "attempts": 1}
+t=   344 | goal_changed           | resident_01     | {"before": "project:art_portfolio", "after": null}
